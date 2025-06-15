@@ -40,6 +40,7 @@
   import type { VForm } from 'vuetify/components'
   import { defineComponent } from 'vue'
   import {
+    type CPU,
     cpuList,
     getServerModelOptions,
     memorySizeFormatCheck,
@@ -52,7 +53,7 @@
     name: 'ServerComposer',
     data: () => ({
       options: ['No Options'] as ServerModels[],
-      cpu: undefined,
+      cpu: undefined as CPU | undefined,
       memorySize: undefined,
       gpu: false,
       memorySizeRules: [
